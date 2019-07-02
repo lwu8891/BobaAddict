@@ -16,40 +16,15 @@ toggleModal = () => {
   this.setState({ isModalVisible: !this.state.isModalVisible });
 };
 
-renderModalContent = () => (
+renderModalContent (){
   
   <View style={styles.content}>
-    <Text style={styles.contentTitle}>
-    Hours:
-    </Text>
-    <Text style={styles.contentTitle}> 
-    Monday: 9:00 AM - 8:00PM
-    </Text>
-    <Text style={styles.contentTitle}> 
-    Tuesday: 9:00 AM - 8:00PM
-    </Text>
-    <Text style={styles.contentTitle}> 
-    Wednesday: 9:00 AM - 8:00PM
-    </Text>
-    <Text style={styles.contentTitle}> 
-    Thursday: 9:00 AM - 8:00PM
-    </Text>
-    <Text style={styles.contentTitle}> 
-    Friday: 9:00 AM - 8:00PM
-    </Text>
-    <Text style={styles.contentTitle}> 
-    Saturday: 9:00 AM - 8:00PM
-    </Text>
-    <Text style={styles.contentTitle}> 
-    Sunday: CLOSED
-    </Text>
-    
     <Button
       onPress={() => this.setState({ visibleModal: null })}
       title="Close"
     />
   </View>
-);
+}
 
 
 
@@ -62,9 +37,9 @@ renderModalContent = () => (
       <Marker
         key={i}
         title={place.name}
-        description = {'Rating: ' + place.rating  + '/5' + '   '  + 'Price Range: '  + place.price} 
+        description = {'Rating: ' + place.rating  + '/5' + '   '  + 'Price Range: '  + place.price } 
         coordinate={place.coords}
-        onPress={() => this.setState({ visibleModal: 'default' })}
+
       >
       <Image source={require('./marker.png')} style={{ width: 20, height: 30 }} />
 

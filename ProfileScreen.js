@@ -57,7 +57,7 @@ class ProfileScreen extends React.Component {
       latitude: location.coords.latitude,
       longitude: location.coords.longitude,
       ...deltas
-    };
+    };  
     await this.setState({ region });
     await this.getBobaShops();
   }
@@ -90,15 +90,7 @@ class ProfileScreen extends React.Component {
         }
 
     },
-    Saved:{
-        screen: Saved,
-        navigationOptions:{
-            tabBarLabel: 'Saved',   
-            tabBarIcon: ({tintColor}) => (
-                <Icon name = "ios-heart" color = {tintColor} size={24}/>
-            )
-        }
-    },
+   
     Options:{
         screen: Options,
         navigationOptions:{

@@ -25,6 +25,8 @@ const getBobaShops = userLocation => {
           price : business.price,
           rating: business.rating,
           coords: business.coordinates,
+     
+
          
         };
       })
